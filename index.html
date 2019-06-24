@@ -8,16 +8,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Freelancer - Start Bootstrap Theme</title>
-
+  <title>Mojays Spayce</title>
+  
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+  
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
-
+  <link href="css/new.css" rel="stylesheet">
+  
 </head>
 
 <body id="page-top">
@@ -25,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Mojays Spayce</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -51,10 +52,12 @@
     <div class="container d-flex align-items-center flex-column">
 
       <!-- Masthead Avatar Image -->
-      <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+
+      <!-- <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt=""> -->
+      <img class="masthead-avatar mb-5 img-thumbnail rounded-0" src="img/me.png" alt="">
 
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+      <h1 class="masthead-heading text-uppercase mb-0">Hi there, I'm Jameel!</h1>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -66,7 +69,8 @@
       </div>
 
       <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+      <!-- <p class="masthead-subheading font-weight-light mb-0">Data Scientist - Full Stack Web Developer</p> -->
+      <p class="masthead-subheading font-weight-light mb-0">I mess with data, and occasionally make websites</p>
 
     </div>
   </header>
@@ -76,7 +80,7 @@
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Stuff I've done</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -92,42 +96,104 @@
 
         <!-- Portfolio Item 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-          </div>
+          </div> -->
         </div>
 
         <!-- Portfolio Item 2 -->
         <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+            <!-- <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+              <i class="fa-10x fab fa-imdb fa-stack-1x"></i>
+              <i class="fa-10x fas fa-chart-bar fa-stack-2x"></i> -->
+              <div class="img-fluid card">
+                  <div class="card-body">
+                    <h5 class="card-title">Movie Stars</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">A Data Visualization Project</h6>
+                    <p class="card-text">Backed by the IMDB movies dataset and powered by R, Python and D3.js, this interactive visualization helps drill down to great movies of any genre or era.</p>
+                    <h6>Tech Stack</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <span class="text-left align-bottom">
+                                <!-- <i class="align-top fas fa-window-maximize fa-2x"></i> -->
+                                Front-end
+                              </span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                              <span class="text-right">
+                                <i class="fab fa-html5 fa-2x"></i>
+                                <i class="fab fa-js fa-2x"></i>
+                                <i class="fab fa-css3-alt fa-2x"></i>
+                              </span>
+
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <span class="text-left align-bottom">
+                                Server
+                              </span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                              <span class="text-right">
+                                <i class="fab fa-node fa-2x "></i>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <span class="text-left align-bottom">
+                                <!-- <i class="align-top fas fa-window-maximize fa-2x"></i> -->
+                                Data Manipulation
+                              </span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                              <span class="text-right">
+                                <i class="fab fa-r-project fa-lg"></i>
+                                <i class="fab fa-python fa-lg"></i>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- <span>HTML5, JavaScript (ECMA 6), CSS3</span> -->
+                        </li>
+                      </ul>
+                    <!-- <a href="#" class="card-link">Check it out</a> -->
+                  </div>
+                </div>
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div class="portfolio-item-caption-content text-center text-white">
+                    <i class="fas fa-info-circle fa-3x"></i>
+                  </div>
+                </div>
           </div>
         </div>
 
         <!-- Portfolio Item 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+          <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-          </div>
+          </div> -->
         </div>
 
         <!-- Portfolio Item 4 -->
-        <div class="col-md-6 col-lg-4">
+        <!-- <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -136,10 +202,10 @@
             </div>
             <img class="img-fluid" src="img/portfolio/game.png" alt="">
           </div>
-        </div>
+        </div> -->
 
         <!-- Portfolio Item 5 -->
-        <div class="col-md-6 col-lg-4">
+        <!-- <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -148,10 +214,10 @@
             </div>
             <img class="img-fluid" src="img/portfolio/safe.png" alt="">
           </div>
-        </div>
+        </div> -->
 
         <!-- Portfolio Item 6 -->
-        <div class="col-md-6 col-lg-4">
+        <!-- <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -160,7 +226,7 @@
             </div>
             <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
           </div>
-        </div>
+        </div> -->
 
       </div>
       <!-- /.row -->
@@ -225,7 +291,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+          <!-- <form name="sentMessage" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Name</label>
@@ -259,7 +325,7 @@
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
 
@@ -272,14 +338,14 @@
       <div class="row">
 
         <!-- Footer Location -->
-        <div class="col-lg-4 mb-5 mb-lg-0">
+        <!-- <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
           <p class="lead mb-0">2215 John Daniel Drive
             <br>Clark, MO 65243</p>
-        </div>
+        </div> -->
 
         <!-- Footer Social Icons -->
-        <div class="col-lg-4 mb-5 mb-lg-0">
+        <!-- <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Around the Web</h4>
           <a class="btn btn-outline-light btn-social mx-1" href="#">
             <i class="fab fa-fw fa-facebook-f"></i>
@@ -293,14 +359,14 @@
           <a class="btn btn-outline-light btn-social mx-1" href="#">
             <i class="fab fa-fw fa-dribbble"></i>
           </a>
-        </div>
+        </div> -->
 
         <!-- Footer About Text -->
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
           <h4 class="text-uppercase mb-4">About Freelancer</h4>
           <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
             <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -309,7 +375,7 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>Copyright &copy; Your Website 2019</small>
+      <small>Copyright &copy; Mojay's Spayce 2019</small>
     </div>
   </section>
 
@@ -363,7 +429,7 @@
 
   <!-- Portfolio Modal 2 -->
   <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
@@ -371,11 +437,11 @@
           </span>
         </button>
         <div class="modal-body text-center">
-          <div class="container">
+          <div class="container-flex">
             <div class="row justify-content-center">
-              <div class="col-lg-8">
+              <div class="col-lg-9">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Movie Stars</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -385,13 +451,33 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/cake.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" href="#" data-dismiss="modal">
-                  <i class="fas fa-times fa-fw"></i>
-                  Close Window
-                </button>
+                <p class="mb-3">
+                  This Web app demonstrates a prototype visualization of the IMDB Movies dataset, and attempts to drill down from genres to eras, and from eras to groups of movies within each year.
+                  It ultimately aims to show movies from each era and genre that are in “a league of their own” and how they compare to other top movies within that subset.
+                </p>
+                <div class="row justify-content-center">
+                  <!-- <div class="col-md-6"> -->
+                    <a class="btn btn-secondary mr-2" target = "_blank" href="https://moviestarsfit5147.herokuapp.com/">
+                        <i class="fas fa-grin-hearts fa-fw"></i>
+                        Check it out
+                      </a>
+                      <!-- </div> -->
+                      <!-- <div class="col-md-6"> -->
+                        <button class="btn btn-primary mr-2" type="button" data-toggle="collapse" data-target="#visDiagram" aria-expanded="false" aria-controls="visDiagram">
+                          <i class="fas fa-project-diagram fa-fw"></i>
+                          View Architecture Diagram
+                        </button>
+                        <a href="#" aria-label="close" data-dismiss="modal" class="btn btn-danger mr-2">
+                            <i class="fas fa-times"></i>
+                            Close this box
+                          </a>
+                  <!-- </div> -->
+                </div>
+                <h5></h5>
+                <div id="visDiagram" class="collapse">
+                  <img class="modal-img img-fluid rounded mb-0" src="img/visproj.png" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -519,7 +605,7 @@
 
   <!-- Portfolio Modal 6 -->
   <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-dialog  modal-xl" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
