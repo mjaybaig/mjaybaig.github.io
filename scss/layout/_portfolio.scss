@@ -9,7 +9,7 @@
     margin-bottom: 30px;
     border-radius: $border-radius;
     overflow: hidden;
-    .portfolio-item-caption {
+    .portfolio-item-caption, .article-item-caption {
       position: absolute;
       top: 0;
       left: 0;
@@ -23,6 +23,14 @@
         font-size: 1.5rem;
       }
     }
+  }
+  .article-item{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    border-radius: .5rem;
+    overflow: hidden;
   }
 }
 

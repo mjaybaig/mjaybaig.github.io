@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Mojays Spayce</title>
+  
+  <!-- Custom fonts for this theme -->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+  <!-- Theme CSS -->
+  <link href="../css/freelancer.min.css" rel="stylesheet">
+  <link href="../css/new.css" rel="stylesheet">
+  
+</head>
+
+<body id="page-top">
+    <a class="js-scroll-trigger" href="#page-top">
+        <span class="upbtn text-center">
+            <i class="fas fa-arrow-up fa-2x mt-1"></i>
+        </span>
+    </a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="../index.html">Mojays Spayce</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <li class="nav-item dropdown mx-0 mx-lg-1">
+                    <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item js-scroll-trigger" href="../index.html#projects">Projects</a>
+                        <a class="dropdown-item js-scroll-trigger" href="../index.html#articles">Articles</a>
+                    </div>
+                </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Skills</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="bg-primary text-white text-left">
+    <!-- <div class="container d-flex flex-column"> -->
+
+      <!-- Masthead Avatar Image -->
+
+      <!-- Masthead Heading -->
+      <!-- <h1 class="masthead-heading text-uppercase mb-0">Hi there, I'm Jameel!</h1> -->
+
+      <!-- Icon Divider -->
+      <!-- <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div> -->
+
+    <!-- </div> -->
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mt-4">
+          Heroku: Deploying a NodeJS app that uses Python to manipulate data
+      </h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Portfolio Grid Items -->
+
+        <!-- Portfolio Item 2 -->
+        <!-- <div class="col-md-4"> -->
+        <p class="lead">
+            This article will show you how to add a Python + Pandas script to your NodeJS web app, and then deploy the app to Heroku. This could be a great starting point for developing rich, fast and asynchronous web applications that are also equipped with the data capabilites brought by Python and it's libraries.
+        </p>
+        <p>
+                For one of my assignments in a Data Visualization course, I utilized a Python script on top of a NodeJS server to do some real-time data filtering and reshaping on a fairly large dataset, which I then visualized using D3. Before you ask, yes, I considered MongoDB however I dropped the idea as I didn’t really think I could expect my instructor to go through the headache of installing Mongo and creating a new database in her machine just to grade my one assignment. On the other hand, chances were she already had Python installed in her machine so using Python + Pandas seemed a better option.
+        </p>
+
+        <p>
+                Anyways, fast forward 2 days of intensive coding and my assignment is submitted. I now want to upload it to the Interwebs for the world to see. Heroku has a great free service and good cli tools, as well as integration with Git. My pain-point, however, Heroku by default detects either a NodeJS app or a Python (Flask/Django) app, but not a combination of the two.
+        </p>
+        <div class="alert alert-info" role="alert">
+            Tl;dr: this article will have you follow along as you create an NodeJS app that uses a Python script to “do something” with data, and then sends the results to the browser.
+        </div>
+        
+        <h1 class="display-4">Step 0: Got the Prerequisites?</h1>
+        <p>
+            Of course, there are prerequisites. Here is what you need:
+            <ol class="list-group">
+                <li class="list-group-item">
+                    NodeJS and NPM (get them <a target="_blank" href="http://www.nodejs.org">here</a>)
+                </li>
+                <li class="list-group-item">
+                    ExpressJS (Find out how to install <a target="_blank" href="https://expressjs.com/en/starter/installing.html">here</a>)
+                </li>
+                <li class="list-group-item">
+                    Python 3.7+ (get it <a target="_blank" href="https://www.python.org/downloads/">here</a> and make sure it’s added to your PATH variable)
+                </li>
+                <li class="list-group-item">
+                    Pip along with pandas (Find how to install pip <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">here</a>, find out how to install pandas <a href="https://pandas.pydata.org/pandas-docs/stable/install.html#installing-from-pypi" target="_blank">here</a>)
+                </li>
+                <li class="list-group-item">
+                    The Git CLI tools (Get them <a href="https://git-scm.com/downloads" target="_blank">here</a>)
+                </li>
+                <li class="list-group-item">
+                    A Heroku account (Sign up <a href="https://signup.heroku.com/">here</a>)
+                </li>
+                <li class="list-group-item">
+                    
+                    The Heroku CLI tools (Get them <a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install">here</a>)                    
+                </li>
+            </ol>
+        </p>
+        <h1 class="display-4">Step 1: Create a new NodeJS project</h1>
+        <p>
+            First thing you do is make a new NodeJS project. Open your terminal, go to your directory of choice and type the following commands
+            <pre><code>
+                $ mkdir projname
+                $ cd projname
+                $ npm init
+            </code>
+        </pre>
+        
+        After following the default (or not) configurations from the following prompts, you can install Express 
+        <pre><code>
+            $ npm install --save express
+        </code></pre>
+        Create a new file here called index.js where we can make a standard Express server:
+        
+        <pre><code>
+            // index.js
+            const express = require('express');
+            const app = express();
+            const port = 3500;
+            const path = require('path');
+            
+            app.get('/', (req, res) => {
+                res.send("There is more to this server than meets the eye!");
+            });
+            
+            app.listen(port, () => console.log(`Port ${port} is now occupied by...me!`));                    
+        </code></pre>
+        To make sure it’s working, run the server by typing in the terminal
+        <pre><code>
+            $ node index.js
+        </code></pre>
+        
+        Then open a browser and navigate to localhost:3500, where you should see the message <samp>“There is more to this server than meets the eye!”</samp>.<br/>
+        <kbd>ctrl + c</kbd> out of the terminal when done.
+    </p>
+    
+    <h1 class="display-4">Step 2: Preparing the Data and Python script</h1>
+    <p>
+        We’ll work with some small, simple data for now. Create a file called <samp>data.csv</samp> in the same folder as index.js and paste the following in there.
+        <pre><code>
+            "","tconst","startYear","originalTitle","averageRating","numVotes","profit","moviescore","genres"
+            "1","tt0000009",1894-04-22,"Miss Jerry",5.6,76,NA,9.22605007573664,"Romance"
+            "2","tt0000147",1897-04-22,"The Corbett-Fitzsimmons Fight",5.2,290,NA,17.3666346768739,"Documentary"
+            "3","tt0000147",1897-04-22,"The Corbett-Fitzsimmons Fight",5.2,290,NA,17.3666346768739,"News"
+            "4","tt0000147",1897-04-22,"The Corbett-Fitzsimmons Fight",5.2,290,NA,17.3666346768739,"Sport"
+            "5","tt0000335",1900-04-22,"Soldiers of the Cross",6.3,39,NA,7.00999286732875,"Biography"
+            "6","tt0000335",1900-04-22,"Soldiers of the Cross",6.3,39,NA,7.00999286732875,"Drama"
+            "7","tt0000574",1906-04-22,"The Story of the Kelly Gang",6.2,504,0,24.9991999871996,"Biography"
+            "8","tt0000574",1906-04-22,"The Story of the Kelly Gang",6.2,504,0,24.9991999871996,"Crime"
+            "9","tt0000574",1906-04-22,"The Story of the Kelly Gang",6.2,504,0,24.9991999871996,"Drama"
+            "10","tt0000615",1907-04-22,"Robbery Under Arms",4.8,14,NA,3.66606055596467,"Drama"
+            "11","tt0000630",1908-04-22,"Amleto",2.9,11,NA,2.52586618806302,"Drama"
+            "12","tt0000675",1908-04-22,"Don Quijote",4.3,10,NA,2.93257565972304,"Drama"
+            "13","tt0000676",1908-04-22,"Don Álvaro o la fuerza del sino",3.8,8,NA,2.46576560118759,"Drama"
+            "14","tt0000679",1908-04-22,"The Fairylogue and Radio-Plays",4.8,33,NA,5.62849891178812,"Adventure"
+            "15","tt0000679",1908-04-22,"The Fairylogue and Radio-Plays",4.8,33,NA,5.62849891178812,"Fantasy"                    
+        </code></pre>
+        <div class="alert alert-info" role="alert">
+            As an FYI, the above is a short extract of data from the IMDB movies dataset. We will be mostly focusing on the <samp>genres</samp> and <samp>numVotes</samp> columns.
+        </div>
+        
+        And to play around with it, here is our simple Python script called <samp>script.py</samp>. We should be able to do complex operations (including machine learning) later as well. For now, we simply utilize a few pandas aggregation methods.
+        Our Python process will open the csv file, take an argument (as a movie genre) from the sys arguments, and aggregate the numVotes column based on this arg.
+        <pre><code>
+            # script.py
+            import pandas as pd
+            import sys
+            import json
+
+            # Read data
+            data = pd.read_csv('data.csv')
+            
+            # Capture first process argument: genre (we’ll provide this later from the NodeJS App)
+            genre = sys.argv[1]
+
+            # Find sum of the numbers of votes of all movies that are of the requested genre
+            retVal = data[data['genres'] == genre]['numVotes'].sum()
+
+            # Print value as json. This is important to retrieve it from the Express app.
+            print(json.dumps({'value': str(retVal)}))
+                
+        </code></pre>
+        </p>
+        <h1 class="display-4">Step 3: Calling the Python script from NodeJS</h1>
+        <p>
+            In order to call our Python script, we will use the npm package child_process. From the root of the project directory, run from the command line:
+            <pre><code>
+                $ npm install –-save child_process
+            </code></pre>
+            This package allows us to “spawn” new processes from NodeJS, and we will be spawning a Python process. The following code does just that; it can be added before the <code>app.listen()</code> snippet.
+            <pre><code>
+                // for now, hardcoding the genre as 'Drama'
+                var genre = 'Drama';
+                
+                // create a child_process object called spawn, then use it to spawn a new process
+                var spawn = require("child_process").spawn;
+                
+                // the first argument is the command line argument, and the second is a list of all process args.
+                var process = spawn('python', ["./script.py", genre]);
+            </code></pre>
+            
+            The <code>spawn()</code> function takes two parameters: the command and it’s arguments. In our case, our command is <code>python</code> and the arguments are the script, and the movie genre <samp>Drama</samp>.
+            In essence, this function tells NodeJS to execute the following command on the system
+            : <code>$ python ./script.py Drama</code>
+        </p>
+        <p>
+            Check out the Python script again: more specifically the last line. After performing whatever complex operations we wish to perform, we are printing out a JSON object. This is important as the contents of this <code>print()</code> are what NodeJS will receive as the return value from the Python script.
+            Let’s 
+            <ol>
+                <li>
+                    Capture this return value in our NodeJS server
+                </li>
+                <li>
+                    Send it to the browser to complete the client-server architecture.
+                </li>
+            </ol>
+            To do this we can place the <code>spawn()</code> code within the express request handler. Our final server.js code looks as below:
+            <pre><code>
+                // index.js
+                const express = require('express')
+                const app = express()
+                const port = 3500;
+                
+                // for now, hardcoding the genre as 'Drama'
+                var genre = 'Drama';
+                
+                // create a child_process object called spawning
+                var spawn = require("child_process").spawn;
+                
+                app.get('/', (req, res) => {
+                    // Spawn new process using "python script.py {genre}"
+                    var process = spawn('python', ["./script.py", genre]);
+                    
+                    // the print() is our stdout. We capture the JSON as an argument called "data" in our callback function
+                    process.stdout.on("data", function(data){
+                        // print out the data to our console to check
+                        console.log(data.toString());
+                        
+                        // send the data as JSON to the calling browser
+                        res.send(JSON.parse(data));
+                    });
+                });
+                
+                app.listen(port, () => console.log(`Port ${port} is now occupied by...me!`));                    
+            </code></pre>
+            
+            Let's quickly test on our local server to make sure the code works. In the terminal, just like before, run <code>$ node index.js</code>, and navigate to <samp>localhost:3500</samp>. There, the following structure should be seen:
+            <pre><code>
+                {
+                    value: "586"
+                }
+            </code></pre>
+            586 is the value our python script computed, and then created a JSON object out of, sending it back to the NodeJS server.
+            Great! Our NodeJS + Python web app works fine locally! Now we must push it to the cloud.
+        </p>
+        
+        <h1 class="display-4">Step 4: Preparing for Heroku</h1>
+        <p>
+                The first thing we must do is to make sure Heroku is aware of what Python version to use, and what Python libraries will be needed.
+                The Python version is communicated using the <samp>runtime.txt</samp> file and the libraries to install via pip are in the <samp>requirements.txt</samp> file. 
+                Hence, in the root folder, make the two files and populate them like so:
+        </p>
+        <p>
+            runtime.txt: <code>python-3.7.3</code>
+        </p>
+        <p>
+            requirements.txt:
+            <code>
+                pandas==0.23.4
+            </code>
+        </p>
+        <p>
+            Any other packages that you might use in your Python script must be mentioned in the <samp>requirements.txt</samp> file. This is because Heroku executes the command <code>pip install -r requirements.txt</code> to install the dependecies required by the project
+        </p>
+        <p>
+                This should take care of the Python environment. The problem, now, is that when we push to Heroku, Heroku will see the <samp>requirements.txt</samp> file and the <samp>script.py</samp> file and assume the entire web application is Python app (running Django or Flask). 
+                It, however is a NodeJS app, and therefore we must explicitly define the starting script. This can be done in a file called <samp>Profile</samp> (no extension). So in the same folder, create a new file called <samp>Procfile</samp> with the following command:
+        </p>
+        <p>
+            Procfile: <code>web: node index.js</code>
+        </p>
+        <p>
+            <samp>Procfile</samp> is the file containing the particular commands to be executed by Heroku to start the app. In our case, we run our NodeJS start script that we have been executing locally as well.
+        </p>
+        <p>
+            Finally, create a new Heroku app from the <a href="https://dashboard.heroku.com/new-app">online console</a>. For this tutorial, the name of the new Heroku app is <kbd>pywnode</kbd>
+        </p>
+        <p class="text-center">
+            <img class="img-thumbnail" width="700" src="../img/heroku-1.PNG"/>
+        </p>
+        <h1 class="display-4">Step 5: Deploying to Heroku</h1>
+        <p>
+            It’s time to deploy! Of course, since we’re using Git to deploy, we’ll need to make a repository first
+            <pre><code>
+                $ git init
+                $ git add .
+                $ git commit -m “The beginning of something awesome”
+                $ heroku git:remote -a pywnode                    
+            </code></pre>
+            Of course, in your case you would type your app name in place of <code>pywnode</code> with the last command.
+        </p>
+        <p>
+            Great! We have a repository, and with the last command there, we set the remote of our repository to be our Heroku app! Just one last thing before we push the code through.
+        </p>
+        <p>
+            The <samp>requirements.txt</samp> file will tell Heroku that the app is a Python app, and the <samp>Procfile</samp> informs it to start a NodeJS server. 
+            We need to explicitly tell Heroku what’s going on in this app. Through the following commands, we tell Heroku that the first buildpack to run is NodeJS and the 2nd is Python. 
+            It will then, during initialization, install bundles for both in order.
+            <pre><code>
+                $ heroku buildpacks:add --index 1 --app pywnode heroku/nodejs
+                $ heroku buildpacks:add --index 2 --app pywnode heroku/python
+            </code></pre>
+            Of course, like before, the argument <code>--app </code> in your case should be your Heroku app name instead of <code>pywnode</code>
+            
+            Now if we check using 
+            <pre><code>
+                $ heroku buildpacks --app &lt;your-app-name&gt;
+            </code></pre>
+            We’ll see both webpacks have been added, ie Heroku knows this app utilizes both NodeJS and Python.
+        </p>
+        <p>
+            Finally, we’re all set to push the app.
+            <pre><code>
+                $ git push heroku master
+            </code></pre>
+            If everything went well, you should see (ideally first) a “NodeJS app detected” prompt on the console followed by the installation of all Node dependencies.
+        </p>
+        <p class="text-center">
+            <img class="img-thumbnail" width="700" src="../img/nodedep.png"/>
+        </p>
+        <p>
+            Followed by a prompt of “Python app detected” with an installation of pip packages
+        </p>
+        <p class="text-center">
+            <img class="img-thumbnail" width="700" src="../img/pydep.png"/>
+        </p>
+        
+        <h1 class="display-4">Step 6: Done!</h1>
+        <p>
+            Congratulations! You should be done at this point! To view your app on the internet, head over to 
+            <samp>https://yourappname.herokuapp.com</samp>
+        </p>
+        
+    </div>
+    
+    
+</section>
+
+<footer class="footer text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+    
+            <!-- Footer Location -->
+            <!-- <div class="col-lg-4 mb-5 mb-lg-0">
+              <h4 class="text-uppercase mb-4">Location</h4>
+              <p class="lead mb-0">2215 John Daniel Drive
+                <br>Clark, MO 65243</p>
+            </div> -->
+    
+            <!-- Footer Social Icons -->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+    
+                <h4 class="text-uppercase mb-4">Find me at</h4>
+              <div class="row justify-content-center mb-2">
+                <a target="_blank" class="btn btn-outline-light btn-social mx-1" href="https://www.github.com/mjaybaig">
+                  <i class="fab fa-fw fa-github"></i>
+                </a>
+                <a target="_blank" class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/mohammad-jameel-baig-7767577a">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+                <a target="_blank" class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/mojaybaig/">
+                  <i class="fab fa-fw fa-instagram"></i>
+                </a>
+                <a target="_blank" class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/mjameelbaig01">
+                  <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+              </div>
+              <!-- <div class="row"> -->
+                <i class="fas fa-fw fa-envelope"></i> mjameelbaig@gmail.com
+              <!-- </div> -->
+            </div>
+    
+            <!-- Footer About Text -->
+            <!-- <div class="col-lg-4">
+              <h4 class="text-uppercase mb-4">About Freelancer</h4>
+              <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
+                <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            </div> -->
+    
+          </div>
+        </div>
+      </footer>
+    
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; Mojay's Spayce 2019</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="../js/jqBootstrapValidation.js"></script>
+  <script src="../js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../js/freelancer.min.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

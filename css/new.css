@@ -1,3 +1,53 @@
 /* .modal-img{
     max-width: 75%;
 } */
+
+#gojslogo {
+    background-color: #1F4963;
+    font-weight: 900;
+    font-size: 120%;
+    color: white;
+    padding: 6px;
+    border-radius: 9px;
+    font-family: 'Lato', sans-serif;
+}
+.btn-social{
+    border-radius: 0px;
+}
+.display-4{
+    font-size: 2.9rem;
+}
+.upbtn{
+    position: fixed;
+    left: 95%;
+    top: 90%;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    background-color: #00000061;
+}
+
+/* .article-item-caption:hover{
+    opacity: 1;
+} */
+/* 
+.article-item-caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    background-color: rgba(44,62,80,.9);
+} */
+/* 
+.article-item{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    border-radius: .5rem;
+    overflow: hidden;
+} */
